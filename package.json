@@ -1,0 +1,16 @@
+{
+  "name": "fcRefresh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alicloud/pop-core": "^1.7.9",
+    "query-string": "^6.13.5"
+  }
+}
