@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@alicloud/pop-core": "^1.7.9",
-    "query-string": "^6.13.5"
+    "@alicloud/pop-core": "^1.7.9"
   }
 }

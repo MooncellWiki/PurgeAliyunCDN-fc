@@ -1,9 +1,8 @@
 const getRawBody = require("raw-body");
 const Core = require("@alicloud/pop-core");
-const queryString = require("query-string");
 exports.handler = (req, resp, context) => {
     getRawBody(req, function (err, body) {
-        body = queryString.parse(body.toString());
+        body = JSON.parse(body.toString());
         if (body.token !== "<token>") {
             resp.send('wrong token');
             return;
@@ -21,7 +20,7 @@ exports.handler = (req, resp, context) => {
                 "RefreshObjectCaches",
                 {
                     RegionId: "cn-hangzhou",
-                    ObjectPath: body.path,
+                    ObjectPath: body.path.join('\r\n'),
                 },
                 {
                     method: "POST",
