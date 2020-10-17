@@ -35,10 +35,12 @@ exports.handler = (req, resp, context) => {
         .then(
           (result) => {
             console.log(JSON.stringify(result));
+            resp.setHeader('content-type', 'application/json');
             resp.send(JSON.stringify(result, null, "  "));
           },
           (ex) => {
             console.log(ex);
+            resp.setHeader('content-type', 'application/json');
             resp.send(JSON.stringify(ex, null, "  "));
           }
         );
@@ -58,10 +60,12 @@ exports.handler = (req, resp, context) => {
         .then(
           (result) => {
             console.log(JSON.stringify(result));
+            resp.setHeader('content-type', 'application/json');
             resp.send(JSON.stringify(result, null, "  "));
           },
           (ex) => {
             console.log(ex);
+            resp.setHeader('content-type', 'application/json');
             resp.send(JSON.stringify(ex, null, "  "));
           }
         );
@@ -82,10 +86,12 @@ exports.handler = (req, resp, context) => {
         .then(
           (result) => {
             console.log(JSON.stringify(result));
+            resp.setHeader('content-type', 'application/json');
             resp.send(JSON.stringify(result, null, "  "));
           },
           (ex) => {
             console.log(ex);
+            resp.setHeader('content-type', 'application/json');
             resp.send(JSON.stringify(ex, null, "  "));
           }
         );
