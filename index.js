@@ -25,7 +25,12 @@ exports.handler = (req, resp, context) => {
           "RefreshObjectCaches",
           {
             RegionId: "cn-hangzhou",
-            ObjectPath: body.path.join("\r\n"),
+            ObjectPath: body.path.map(v => {
+                            if (v.startsWith("//")) {
+                                v = "https:" + v;
+                            }
+                            return v;
+                        }).join("\r\n"),
             ObjectType: body.isFolder ? "Directory" : "File",
           },
           {
